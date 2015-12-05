@@ -55,8 +55,8 @@ touch /etc/apt/apt.conf
 
 for i in {0..3}
 do
-echo -n Acquire::${arr[i]}::proxy ${arr[i]}://edcguest:edcguest@ >> /etc/apt/apt.conf
+echo -n Acquire::${arr[i]}::proxy \"${arr[i]}://edcguest:edcguest@ >> /etc/apt/apt.conf
 echo -n $x  >> /etc/apt/apt.conf
-echo -n ":3128/;" >> /etc/apt/apt.conf
+echo -n ":3128/\";" >> /etc/apt/apt.conf
 echo >> /etc/apt/apt.conf
 done
